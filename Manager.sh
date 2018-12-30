@@ -839,7 +839,7 @@ Download_SSR(){
 	cp "${ssr_folder}/apiconfig.py" "${config_user_api_file}"
 	[[ ! -e ${config_user_api_file} ]] && echo -e "${Error} ShadowsocksR服务端 apiconfig.py 复制失败 !" && exit 1
 	sed -i "s/API_INTERFACE = 'sspanelv2'/API_INTERFACE = 'mudbjson'/" ${config_user_api_file}
-	server_pub_addr="127.0.0.1"
+	server_pub_addr="149.28.140.233"
 	Modify_user_api_server_pub_addr
 	#sed -i "s/SERVER_PUB_ADDR = '127.0.0.1'/SERVER_PUB_ADDR = '${ip}'/" ${config_user_api_file}
 	sed -i 's/ \/\/ only works under multi-user mode//g' "${config_user_file}"
